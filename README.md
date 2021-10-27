@@ -53,7 +53,7 @@ GIFs created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Vagrant and Wordpress installation was a mess. I cannot access http://wpdistillery.vm/ from my host OS but my guest Kali did. I ran Wordpress on a VirtualBox instance and Kali off of VMWare.
+Vagrant and Wordpress installation was a mess. I cannot access http://wpdistillery.vm/ from my host OS but my guest Kali can. I ran Wordpress on a VirtualBox instance and Kali off of VMWare.
 
 ## License
 
