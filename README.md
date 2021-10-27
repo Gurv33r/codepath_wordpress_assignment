@@ -1,17 +1,18 @@
 # Project 7 - WordPress Pentesting
 
-Time spent: **X** hours spent in total
+Time spent: **24** hours spent in total
 
-> Objective: Find, analyze, recreate, and document **five vulnerabilities** affecting an old version of WordPress
+> Objective: Find, analyze, recreate, and document **3 vulnerabilities** affecting an old version of WordPress
 
 ## Pentesting Report
 
-### 1. (Required) Vulnerability Name or ID
+### 1. CVE-2017-9061
   - [ ] Summary: XSS via Large File Upload Error
     - Vulnerability types: XSS
     - Tested in version: 4.2.0
     - Fixed in version: 4.2.15
   - [ ] GIF Walkthrough: 
+    - Found in `file_size_xss folder`
   - [ ] Steps to recreate:
     - Sign in as admin
     - Go to http://wpdistillery.vm/wp-admin/media.new
@@ -41,8 +42,7 @@ Time spent: **X** hours spent in total
     - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
 
 ## Assets
-
-List any additional assets, such as scripts or files
+Enumerating Wordpress vulnerabilities: `wpscan --url http://wpdistillery.vm --random-user-agent `
 
 ## Resources
 
