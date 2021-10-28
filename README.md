@@ -22,26 +22,30 @@ Time spent: **24** hours spent in total
     - That's it!
   - [ ] Affected source code:
     - [Patch to Source Code](https://github.com/WordPress/WordPress/commit/8c7ea71edbbffca5d9766b7bea7c7f3722ffafa6)
-### 2. (Required) Vulnerability Name or ID
-  - [ ] Summary: Authenticated Javascript File Upload 
-    - Vulnerability types: XSS Injection
+### 2. CVE-2017-14719
+  - [ ] Summary: Path Traversal in Unzipping in the Customizer
+    - Vulnerability types: Path Traversal
     - Tested in version: 4.2.0
-    - Fixed in version: 
-  - [ ] GIF Walkthrough: Found in 
-  - [ ] Steps to recreate: 
+    - Fixed in version: 4.2.16
+  - [ ] GIF Walkthrough: Found in `path_unzip` folder
+  - [ ] Steps to recreate:
+    - Download the `zip_poc.zip`file below or in the `path_unzip folder`
+    - Go to http://wpdistillery.vm/wp-admin/plugin-install.php?tab=upload
+    - Upload the zip file
+    - Check your /tmp folder for additional files that shouldn't be there.  
   - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
+    - [Patch to Source Code](https://core.trac.wordpress.org/changeset/41457)
 ### 3. CVE-2019-9787
   - [ ] Summary: XSS via Post Comments
     - Vulnerability types: XSS Injection
     - Tested in version: 4.2.0
     - Fixed in version: 4.2.23
-  - [ ] GIF Walkthrough: found in `comment_xss`
+  - [ ] GIF Walkthrough: found in `comment_xss`folder
   - [ ] Steps to recreate: 
     - Create a post
       - Wordpress 4.2's security against XSS injection in the comments of a Post is to just display it inside a p-tag. 
       - This is bad, because once you figure it out (which required just a few clicks), it's really easy to bypass the mechanism:
-        - Just close the p-tag by starting the XSS off with `</p>`
+        - Start your XSS by closing the p-tag by starting the XSS off with `</p>`
         - Enter the XSS as a script tag, for example: `<script>alert('XSS')</script>`
         - Finish it off with `<p>` since there is closing p-tag waiting for you on the backend, and doing so will create another blank but valid p-tag
     - All in all, comment `</p><script>alert('XSS')</script><p>`
@@ -52,7 +56,7 @@ Time spent: **24** hours spent in total
 
 ## Assets
 Enumerating Wordpress vulnerabilities: `wpscan --url http://wpdistillery.vm --random-user-agent `
-
+[zip_poc.zip](http://github.com/Gurv33r/codepath_wordpress_assignment/path_unzip/zip_poc.zip)
 ## Resources
 
 - [WordPress Source Browser](https://core.trac.wordpress.org/browser/)
