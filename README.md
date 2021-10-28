@@ -15,7 +15,7 @@ Time spent: **24** hours spent in total
     - Found in `file_size_xss folder`
   - [ ] Steps to recreate:
     - Sign in as admin
-    - Go to http://wpdistillery.vm/wp-admin/media.new
+    - Go to http://wpdistillery.vm/wp-admin/media.new.php
     - Find a file with a size greater than 20 MB
     - Edit the filename to include a simple XSS statement (`image<img src=a onerror=alert('XSS')>.png`)
     - Upload the file
