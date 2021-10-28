@@ -8,7 +8,7 @@ Time spent: **24** hours spent in total
 
 ### 1. CVE-2017-9061
   - [ ] Summary: XSS via Large File Upload Error
-    - Vulnerability types: XSS
+    - Vulnerability types: XSS Injection
     - Tested in version: 4.2.0
     - Fixed in version: 4.2.15
   - [ ] GIF Walkthrough: 
@@ -21,20 +21,20 @@ Time spent: **24** hours spent in total
     - Upload the file
     - That's it!
   - [ ] Affected source code:
-    - [Link 1](https://github.com/WordPress/WordPress/commit/8c7ea71edbbffca5d9766b7bea7c7f3722ffafa6)
+    - [Patch to Source Code](https://github.com/WordPress/WordPress/commit/8c7ea71edbbffca5d9766b7bea7c7f3722ffafa6)
 ### 2. (Required) Vulnerability Name or ID
-  - [ ] Summary: 
-    - Vulnerability types:
-    - Tested in version:
+  - [ ] Summary: Authenticated Javascript File Upload 
+    - Vulnerability types: XSS Injection
+    - Tested in version: 4.2.0
     - Fixed in version: 
-  - [ ] GIF Walkthrough: 
+  - [ ] GIF Walkthrough: Found in 
   - [ ] Steps to recreate: 
   - [ ] Affected source code:
     - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
 ### 3. (Required) Vulnerability Name or ID
-  - [ ] Summary: 
-    - Vulnerability types:
-    - Tested in version:
+  - [ ] Summary: XSS via Post Comments
+    - Vulnerability types: XSS Injection
+    - Tested in version: 4.2.0
     - Fixed in version: 
   - [ ] GIF Walkthrough: 
   - [ ] Steps to recreate: 
