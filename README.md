@@ -31,15 +31,24 @@ Time spent: **24** hours spent in total
   - [ ] Steps to recreate: 
   - [ ] Affected source code:
     - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
-### 3. (Required) Vulnerability Name or ID
+### 3. CVE-2019-9787
   - [ ] Summary: XSS via Post Comments
     - Vulnerability types: XSS Injection
     - Tested in version: 4.2.0
-    - Fixed in version: 
-  - [ ] GIF Walkthrough: 
+    - Fixed in version: 4.2.23
+  - [ ] GIF Walkthrough: found in `comment_xss`
   - [ ] Steps to recreate: 
+    - Create a post
+      - Wordpress 4.2's security against XSS injection in the comments of a Post is to just display it inside a p-tag. 
+      - This is bad, because once you figure it out (which required just a few clicks), it's really easy to bypass the mechanism:
+        - Just close the p-tag by starting the XSS off with `</p>`
+        - Enter the XSS as a script tag, for example: `<script>alert('XSS')</script>`
+        - Finish it off with `<p>` since there is closing p-tag waiting for you on the backend, and doing so will create another blank but valid p-tag
+    - All in all, comment `</p><script>alert('XSS')</script><p>`
+    - Post the comment
+    - That's it!
   - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
+    - [Patch to Source Code](https://github.com/WordPress/WordPress/commit/0292de60ec78c5a44956765189403654fe4d080b)
 
 ## Assets
 Enumerating Wordpress vulnerabilities: `wpscan --url http://wpdistillery.vm --random-user-agent `
