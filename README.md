@@ -45,7 +45,7 @@ Time spent: **24** hours spent in total
     - Create a post
       - Wordpress 4.2's security against XSS injection in the comments of a Post is to just display it inside a p-tag. 
       - This is bad, because once you figure it out (which required just a few clicks), it's really easy to bypass the mechanism:
-        - Start your XSS by closing the p-tag by starting the XSS off with `</p>`
+        - Start your XSS by closing the p-tag with `</p>`
         - Enter the XSS as a script tag, for example: `<script>alert('XSS')</script>`
         - Finish it off with `<p>` since there is closing p-tag waiting for you on the backend, and doing so will create another blank but valid p-tag
     - All in all, comment `</p><script>alert('XSS')</script><p>`
