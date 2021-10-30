@@ -56,7 +56,7 @@ Time spent: **24** hours spent in total
 
 ## Assets
 - Enumerating Wordpress vulnerabilities: `wpscan --url http://wpdistillery.vm --random-user-agent` 
-- Zip file used to for path traversal vulnerability = [zip_poc.zip](http://github.com/Gurv33r/codepath_wordpress_assignment/path_unzip/zip_poc.zip)
+- Zip file used to for path traversal vulnerability = [zip_poc.zip](https://github.com/Gurv33r/codepath_wordpress_assignment/blob/master/path_unzip/zip_poc.zip)
 ## Resources
 
 - [WordPress Source Browser](https://core.trac.wordpress.org/browser/)
