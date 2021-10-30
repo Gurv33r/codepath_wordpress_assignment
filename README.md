@@ -40,7 +40,7 @@ Time spent: **24** hours spent in total
     - Vulnerability types: XSS Injection
     - Tested in version: 4.2.0
     - Fixed in version: 4.2.23
-  - [ ] GIF Walkthrough: found in `comment_xss`folder
+  - [ ] GIF Walkthrough: found in `comment_xss` folder
   - [ ] Steps to recreate: 
     - Create a post
       - Wordpress 4.2's security against XSS injection in the comments of a Post is to just display it inside a p-tag. 
